@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+        //arrays holding scores
+      let myScore = [92, 98, 84, 76, 89, 99, 100];
+      let yourScore = [82, 98, 94, 88, 92, 100, 100];
+
+      //this function will be adding our scores and dividing to get an avg
+      function getAverage(score) {
+
+        let sum = 0; //this will contain the sum of all our scores (starting at 0)
+        let scoreArrayLength = score.length; //getting the length of our score array
+
+        for (let i = 0; i < scoreArrayLength; i++) { //this for loop will loop the length of our array
+          sum += score[i]; //sum will starting updating and adding the items in our score array to get the sum
+          console.log(sum);
+        }
+
+        let scoreAvg = (sum / scoreArrayLength).toFixed(2); //dividing our total sum but the length of the array
+        console.log(scoreAvg);
+      }
+
+      getAverage(myScore);
+      getAverage(yourScore);
+    </script>
+  </body>
+</html>

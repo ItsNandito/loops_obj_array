@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>days of the week starting on <span></span></h1>
+    <ol></ol>
+
+    <script>
+      //create an array
+
+      let week = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Gordurday",
+      ];
+
+      console.log(week);
+
+      let date = week[7];
+      console.log(date);
+
+      let spanElement = document.querySelector("span");
+      spanElement.innerText = date;
+
+      function makeLi(item, index) {
+        let list = document.querySelector("ol"); // save the html tags with data inside of it
+        let liElement = document.createElement("li"); // create an li
+        list.appendChild(liElement).innerText = week[index];
+      }
+
+      week.forEach(makeLi);
+    </script>
+  </body>
+</html>

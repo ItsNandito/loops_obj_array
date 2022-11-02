@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let students = [
+        { name: "Zephaniah", scores: [100, 96, 99, 92] },
+        { name: "Pursalane", scores: [92, 89, 96, 100, 94] },
+        { name: "Siddalee", scores: [86, 72, 92] },
+        { name: "Ian", scores: [98, 84, 89, 100, 100, 76] },
+        { name: "Elisha", scores: [89, 100] },
+        { name: "Ezra", scores: [100, 99, 100, 87] },
+      ];
+
+      let studentArrayLength = students.length;
+
+
+      for (let i = 0; i < studentArrayLength; i++) { //this loop is going to itterate by how many students are in our array
+
+        console.log(`i:${i}`); //Im checking what itteration for students im on
+        let studentScoreArray = students[i].scores.length; //getting the length of the students score to use in our inner loop
+        let studentName = students[i].name; //storing the students name to use when outputing avg on console in inner loop
+        let studentScoreSum = 0; //I put the starting score out here so my inner loop doesnt reset it when summing up score
+        console.log(`Student has ${studentScoreArray} scores`); //confirming how many items within their score property
+
+        for (let x = 0; x < studentScoreArray; x++) { //this will itterate throught each students score
+
+          console.log(`x:${x}`); //cheking what itteration im on for the said students score
+          studentScoreSum += students[i].scores[x];
+          console.log(studentScoreSum);
+
+          if (x == studentScoreArray - 1) { //once we reach the end of the loop, it will display the avg with the students name
+            let studentavg = (studentScoreSum / studentScoreArray).toFixed(2);
+            console.log(`${studentName} avg is ${studentavg}`);
+
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
