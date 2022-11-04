@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //numeric sort
+
+      let numbers = [3, 27, 400, 1, 111, 5];
+      console.log (`numbers are NOT sorted ${numbers}`)
+
+      function sortNumbersAscending(x,y) {
+        return x - y;
+      }
+
+      function sortNumbersDescending(x,y) {
+        return y - x;
+      }
+
+      console.log(numbers.sort(sortNumbersDescending));
+      console.log(numbers.sort(sortNumbersAscending));
+
+      numbers.sort();
+
+
+    // function compareAscendingNumber(a,b) {
+    //     if(a < b) return -1;           //values a & b are in the right order
+    //     else if (a ==b) return 0;      //the values a & b are the same
+    //     else return 1;                 //values a & b are in the wrong order -sawp them
+
+    // }
+
+    // let numbers = [3,27,400,1,111,5];
+    // console.log(`numbers NOT sorted aer ${numbers}`);
+
+    // numbers.sort(compareAscendingNumber);
+    // console.log(`numbers sorted are ${numbers}`);
+
+    </script>
+
+  </body>
+</html>
